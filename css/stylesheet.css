@@ -1,0 +1,295 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #000;
+}
+
+
+.logo {
+    display: block;
+    height: auto;
+    width: 3em;
+    margin: 1em auto;
+}
+
+h1{
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+#scene{
+    margin: 6em 0 5em 0;
+}
+
+#mario{
+    display: block;
+    width: 15em;
+    height: auto;
+    margin: auto;
+}
+
+.audio{
+    display: block;
+    height: 100%;
+    width: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+
+.buttons{
+    text-align: center;
+}
+
+#audioControl{
+    text-align: center;
+}
+
+button{
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover{
+
+    color: #796b6b;
+    transform: scale(1.2);
+}
+
+
+
+/*/////////////////////////MOVE//////////////////////*/
+
+.move{
+    animation: move 4s linear;
+}
+
+@keyframes move {
+
+    from{
+    transform: translateX(-60%)
+    }
+
+    to{
+        transform: translateX(100%);
+    }
+}
+
+/*/////////////////////////MOVE to 30//////////////////////////////*/
+
+
+.move30{
+    animation: move30 2s linear;
+}
+
+@keyframes move30 {
+
+    from{
+    transform: translateX(-60%)
+    }
+
+    to{
+        transform: translateX(-20%);
+    }
+}
+
+
+/*/////////////////////////MOVE from 30//////////////////////////////*/
+
+
+.movefrom30{
+    animation: movefrom30 3.5s linear;
+}
+
+@keyframes movefrom30 {
+
+    from{
+    transform: translateX(-20%)
+    }
+
+    to{
+        transform: translateX(100%);
+    }
+}
+
+/*/////////////////////////jump//////////////////////////////*/
+
+.jump{
+    animation: jump 0.5s linear infinite;
+}
+
+@keyframes jump {
+
+
+    to{
+        transform: translateY(-50px);
+    }
+}
+
+/*/////////////////////////Fade//////////////////////////////*/
+
+
+.fade{
+    animation: fade 4s linear;
+}
+
+@keyframes fade {
+
+    50%{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*/////////////////////////glow//////////////////////////////*/
+
+
+.glow{
+    animation: glow 4s linear;
+}
+
+@keyframes glow {
+
+    0{
+        background: #000;
+    }
+    50%{
+        background: #fff;;
+    }
+    100%{
+        background: #000;
+    }
+}
+
+
+/*/////////////////////////fall down//////////////////////////////*/
+
+
+.fallD{
+    animation: fallD 0.5s linear;
+}
+
+@keyframes fallD {
+    to{
+        transform: rotateZ(-90deg)
+    }
+}
+
+
+/*/////////////////////////shake//////////////////////////////*/
+
+.shake{
+    animation: shake 0.5s linear 4;
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+/*/////////////////////////COOL//////////////////////////////*/
+
+.cool{
+    animation: cool 3s linear;
+}
+
+
+@keyframes cool {
+  from{
+    transform: translateX(-60%)
+    }
+
+    to{
+        transform: translateX(100%);
+    }
+}
+
+.cool2{
+    animation: cool2 3s linear;
+}
+
+@keyframes cool2{
+
+    to{
+        transform: rotateZ(500deg);
+    }
+}
+
+
+/*////////////////////////////////////////IPAD VERSION//////////////////////////*/
+
+@media all and (min-width: 750px) {
+
+
+    .logo {
+    width: 4.5em;
+    margin: 3em auto 1em auto;
+}
+
+
+
+    h1{
+    font-size: 2.5em;
+    padding-top: 2em;
+}
+
+
+#scene{
+    margin: 12em 0 10em 0;
+}
+
+
+    #mario{
+    width: 18em;
+
+}
+
+    button{
+    font-size: 1.5em;
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+
+
+
+}
+
+
+
+
+/*//////////////////////////////////////DESKTOP VERSION/////////////////////////*/
+
+@media all and (min-width: 1100px) {
+
+
+
+}
